@@ -584,5 +584,14 @@ Java默认使用对象的引用地址做hashCode，比较的是引用地址，ne
 8.contains方法：判断哈希表中是否存在key，hashTable\[hash(key)].containsKey(key)。    
 9.get方法：获取哈希表中指定key的value，hashTable\[hash(key)].get(key)。  
 
+## 排序Sort   
+-  BubbleSort.java, BubbleSortTest.java   
+冒泡排序：交换排序类算法，算法平均复杂度O(n²)，稳定，支持原地排序。  
+1.比较相邻的元素。如果第一个比第二个大，就交换他们两个。  
+2.对每一对相邻元素作同样的工作，从开始第一对到结尾的最后一对。这步做完后，最后的元素会是最大的数。   
+3.针对所有的元素重复以上的步骤，除了最后一个。  
+4.持续每次对越来越少的元素重复上面的步骤，直到没有任何一对数字需要比较。  
+
+
 
 
