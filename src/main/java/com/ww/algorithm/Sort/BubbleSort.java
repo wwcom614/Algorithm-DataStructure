@@ -1,5 +1,7 @@
 package com.ww.algorithm.Sort;
 
+import org.springframework.stereotype.Component;
+
 import java.util.Arrays;
 
 /*
@@ -10,15 +12,16 @@ import java.util.Arrays;
 4.持续每次对越来越少的元素重复上面的步骤，直到没有任何一对数字需要比较。
 */
 
+@Component
 public class BubbleSort {
 
-    public static int[] bubbleSort(int[] sourceArray) throws Exception {
+    public  int[] bubbleSort(int[] sourceArray) throws Exception {
         // 对 arr 进行拷贝，不改变参数内容
         int[] arr = Arrays.copyOf(sourceArray, sourceArray.length);
         //前一个元素与后一个元素比较，直到倒数第2个元素
         for (int i = 0; i < arr.length - 1; i++) {
-            // 设定一个标记bInterchange，若为false，则表示此次循环没有进行交换，也就是待排序列已经有序，排序已经完成。
-            boolean bInterchange = false;
+            // 设定一个标记bSwap，若为false，则表示此次循环没有进行交换，也就是待排序列已经有序，排序已经完成。
+            boolean bSwap = false;
             //只比较交换i之前的元素即可
             for (int j = 0; j < arr.length - 1 - i; j++) {
                 //如果前一个元素比后一个元素大
@@ -27,8 +30,8 @@ public class BubbleSort {
                     int tmp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = tmp;
-                    bInterchange = true;
-                    if (!bInterchange) {
+                    bSwap = true;
+                    if (!bSwap) {
                         break;
                     }
                 }
