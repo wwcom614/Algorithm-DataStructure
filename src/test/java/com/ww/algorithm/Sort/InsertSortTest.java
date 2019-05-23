@@ -12,20 +12,20 @@ import java.util.Arrays;
 @Log
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class QuickSortTest {
+public class InsertSortTest {
 
     @Resource
-    QuickSort quickSort;
+    InsertSort insertSort;
 
     @Test
-    public void testQuickSort() throws Exception {
+    public void testBubbleSort() throws Exception {
         int[] array = new int[]{5, 7, 2, 9, 4, 1, 0, 6, 7};
         log.info("【SourceArray】" + Arrays.toString(array));
         //【SourceArray】[5, 7, 2, 9, 4, 1, 0, 6, 7]
 
-        quickSort.quickSort(array,0, array.length-1);
-        log.info("【QuickSortArray】" + Arrays.toString(array));
-        //【QuickSortArray】[0, 1, 2, 4, 5, 6, 7, 7, 9]
-    }
+        insertSort.insertSort(array);
 
+        log.info("【InsertSortArray】" + Arrays.toString(array));
+        //【InsertSortArray】[0, 1, 2, 4, 5, 6, 7, 7, 9]
+    }
 }

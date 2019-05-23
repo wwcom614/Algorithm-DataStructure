@@ -599,7 +599,10 @@ Java默认使用对象的引用地址做hashCode，比较的是引用地址，ne
 2.挖坑分治法：比基准值std小的向左移动，比基准值std大的向右移动,一直到左右index重合(此位置leftIndex==rightIndex)，把标准值std放到该index上。   
 3.基准值左右两侧继续递归重复上述过程，一直到左右两侧index重合。   
 
-
-
+-  InsertSort.java, InsertSortTest.java   
+1.首先设定插入次数，即循环次数，for(int i=1;i<length;i++)，从第2个数开始~最后一个数，逐个与左侧有序数组数值比较。   
+2.设定本次循环的待插入数insertNum=a\[i]，以及得到左侧有序数组的最后一个数的index，j=i-1。   
+3.从左侧有序数组最后一个数arr\[j]开始向前遍历j--，如果待插入数insertNum小于当前值arr\[j]，就将当前值arr\[j]向后移动一位a\[j + 1] = a\[j]。   
+4.如果待插入数insertNum>=当前值arr\[j]，将当前数放到空着的位置，即a\[j + 1] = insertNum。   
 
 

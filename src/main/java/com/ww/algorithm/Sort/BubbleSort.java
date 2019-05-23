@@ -2,8 +2,6 @@ package com.ww.algorithm.Sort;
 
 import org.springframework.stereotype.Component;
 
-import java.util.Arrays;
-
 /*
 冒泡排序：交换排序类算法，算法平均复杂度O(n²)，稳定，支持原地排序
 1.比较相邻的元素。如果第一个比第二个大，就交换他们两个。
@@ -15,9 +13,8 @@ import java.util.Arrays;
 @Component
 public class BubbleSort {
 
-    public  int[] bubbleSort(int[] sourceArray) throws Exception {
-        // 对 arr 进行拷贝，不改变参数内容
-        int[] arr = Arrays.copyOf(sourceArray, sourceArray.length);
+    public  void bubbleSort(int[] arr) throws Exception {
+
         //前一个元素与后一个元素比较，直到倒数第2个元素
         for (int i = 0; i < arr.length - 1; i++) {
             // 设定一个标记bSwap，若为false，则表示此次循环没有进行交换，也就是待排序列已经有序，排序已经完成。
@@ -37,6 +34,5 @@ public class BubbleSort {
                 }
             }
         }
-        return arr;
     }
 }
